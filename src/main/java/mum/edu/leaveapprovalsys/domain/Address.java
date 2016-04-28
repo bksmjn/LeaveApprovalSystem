@@ -45,7 +45,7 @@ public class Address implements Serializable{
 	private String addressType;
 	
 	public Address(){
-		this.user=new User();
+	
 	}
 
 

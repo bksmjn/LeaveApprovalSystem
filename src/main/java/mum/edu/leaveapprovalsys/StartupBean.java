@@ -1,7 +1,7 @@
 package mum.edu.leaveapprovalsys;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.annotation.PostConstruct;
 
@@ -37,8 +37,9 @@ public class StartupBean {
 		user.setPhoneNumber("319-217-7861");
 		user.setRole(Role.ADMIN);
 		address.setUser(user);
-		List<Address> addresses = new ArrayList<Address>();
+		Set<Address> addresses = new HashSet<Address>();
 		addresses.add(address);
+		user.setAddresses(addresses);
 		this.userService.addUser(user);
 	}
 
