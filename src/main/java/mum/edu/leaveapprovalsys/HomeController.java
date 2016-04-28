@@ -1,4 +1,4 @@
-package mum.edu.leavemgmtsys;
+package mum.edu.leaveapprovalsys;
 
 import java.text.DateFormat;
 import java.util.Date;

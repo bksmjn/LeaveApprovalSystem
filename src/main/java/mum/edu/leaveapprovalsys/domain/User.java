@@ -1,4 +1,4 @@
-package mum.edu.leavemgmtsys.domain;
+package mum.edu.leaveapprovalsys.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -10,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -31,9 +32,7 @@ public class User  implements Serializable{
 	@NotNull
 	@Column(name="lastname")
 	private String lastName;
-	@NotNull
 	@Column(name="dateofbirth")
-	@Temporal(TemporalType.DATE)
 	private LocalDate dateOfBirth;
 	@Id
 	@Column(name="emailaddress")
@@ -47,7 +46,7 @@ public class User  implements Serializable{
 	@Column(name="is_active")
 	private boolean isActive;
 	
-	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER,mappedBy="user")
 	private Set<Address> addresses;
 
 	public User() {

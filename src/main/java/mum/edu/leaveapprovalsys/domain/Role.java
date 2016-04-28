@@ -1,4 +1,4 @@
-package mum.edu.leavemgmtsys.domain;
+package mum.edu.leaveapprovalsys.domain;
 /**
  *@author bikesh
 **/

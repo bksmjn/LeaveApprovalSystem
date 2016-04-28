@@ -1,26 +1,34 @@
-package mum.edu.leavemgmtsys.domain;
+package mum.edu.leaveapprovalsys.domain;
+
+import java.io.Serializable;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 
 /**
  *@author bikesh
 **/
-public class Address {
+@Entity
+public class Address implements Serializable{
 	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String addressId;
+	private Long addressId;
 
 	@ManyToOne
-	@Column(name="userid")
-	private String userId;
+	@JoinColumn(name="user_id")
+	private User user;
+	
 	@NotNull
 	@Column(name="street")
 	private String street;
@@ -37,15 +45,36 @@ public class Address {
 	private String addressType;
 	
 	public Address(){
-		
+		this.user=new User();
 	}
-	
-	public String getUserId() {
-		return userId;
+
+
+	public Long getAddressId() {
+		return addressId;
 	}
-	public void setUserId(String userId) {
-		this.userId = userId;
+
+	public void setAddressId(Long addressId) {
+		this.addressId = addressId;
 	}
+
+
+
+
+
+
+
+	public User getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+
 	public String getStreet() {
 		return street;
 	}
