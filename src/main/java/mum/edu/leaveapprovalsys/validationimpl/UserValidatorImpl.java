@@ -1,12 +1,12 @@
-package mum.edu.leaveapprovalsys.validatorimpl;
+package mum.edu.leaveapprovalsys.validationimpl;
 
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Controller;
 
 import mum.edu.leaveapprovalsys.domain.User;
-import mum.edu.leaveapprovalsys.validator.UserValidator;
+import mum.edu.leaveapprovalsys.validation.UserValidator;
 
-@Service
+@Controller
 public class UserValidatorImpl implements UserValidator{
 
 	public boolean validateUser(User user) {

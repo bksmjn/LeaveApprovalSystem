@@ -1,4 +1,4 @@
-package mum.edu.leaveapprovalsys.validator;
+package mum.edu.leaveapprovalsys.validation;
 
 import mum.edu.leaveapprovalsys.domain.User;
 

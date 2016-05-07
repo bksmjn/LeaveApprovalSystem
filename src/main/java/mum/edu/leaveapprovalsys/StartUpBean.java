@@ -14,7 +14,7 @@ import mum.edu.leaveapprovalsys.domain.User;
 import mum.edu.leaveapprovalsys.service.UserService;
 
 @Component
-public class StartupBean {
+public class StartUpBean {
 
 	@Autowired
 	private UserService userService;

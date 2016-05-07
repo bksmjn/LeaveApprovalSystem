@@ -14,6 +14,9 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserRepository userRepository;
+	public UserServiceImpl(){
+		System.out.println("User Service Bean Created");
+	}
 
 	public void addUser(User user) {
 		System.out.println("Set Size:"+user.getAddresses().size());
